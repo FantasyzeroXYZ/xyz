@@ -4,4 +4,7 @@ gcc hello.c -o hello
 git push -u origin main
 本地更新
 git pull origin main(分支)
-     
+shell脚本：ctrl+c强制退出进程
+查看文件内容  cat 文件名
+
+
