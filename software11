@@ -1,0 +1,11 @@
+#!/bin/bash
+cd /etc/apt
+cp /etc/apt/sources.list /etc/apt/sources.list.backup
+sed -i 's/^deb/#deb/g' sources.list
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse" >> sources.list
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse" >> sources.list
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse" >> sources.list
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse" >> sources.list
+apt update
+apt install gcc
+apt install make
