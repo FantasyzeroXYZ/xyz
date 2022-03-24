@@ -1,0 +1,14 @@
+#!/usr/bin/expect
+set passiwd "your password"#添加你的密码
+spawn ssh-keygen -t rsa -f /home/$env(USER)/.ssh/id_rsa -C "1035203852@qq.com"
+set timeout -1
+expect "Overwrite"
+send "y\r"
+
+expect "*passphrase)*" 
+send "$passwd\r"
+
+expect "*again*" 
+send "$passwd\r"
+
+expect eof
